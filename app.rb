@@ -1,24 +1,16 @@
+require_relative 'square.rb'
+require_relative 'rectangle.rb'
+
 # Squares
-side_length = 5
-
-def calculate_area length
-  length ** 2
-end
-
-def calculate_perimeter length
-  length * 4
-end
-
-area = calculate_area side_length
-perimeter = calculate_perimeter side_length
-
-puts "Area: #{area} Perimeter: #{perimeter}"
+square = Square.new 5
+puts "Area: #{square.calculate_area} Perimeter: #{square.calculate_perimeter}"
 
 # scale the square by a factor of 10
-side_length *= 10
+puts "Area: #{square.calculate_area_scaled} Perimeter: #{square.calculate_perimeter_scaled}"
 
-scaled_area = calculate_area side_length
-scaled_perimeter = calculate_perimeter side_length
+# Rectangle
+rectangle = Rectangle.new 7, 3
+puts "Area: #{rectangle.rect_area} Perimeter: #{rectangle.rect_perimeter}"
 
-puts "Area: #{scaled_area} Perimeter: #{scaled_perimeter}"
-
+# scale the Rectangle by a factor of 10
+puts "Area: #{rectangle.rect_area_scaled} Perimeter: #{rectangle.rect_perimeter_scaled}"
